@@ -1,0 +1,12 @@
+{
+  "name": "farmmarket-server",
+  "version": "0.0.0",
+  "description": "Simple farmer simulator/visualizer",
+  "main": "server.js",
+  "author": "gang gang",
+  "dependencies": {
+    "express": "~4.7.2",
+    "morgan": "~1.2.2",
+    "body-parser": "~1.5.2"
+  }
+}
