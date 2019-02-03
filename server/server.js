@@ -3,7 +3,8 @@
     var app      = express();                               // create our app w/ express
     var morgan = require('morgan');             // log requests to the console (express4)
     var bodyParser = require('body-parser');    // pull information from HTML POST (express4)
-
+    var mongoose = require('mongoose');
+    var db;
     // configuration =================
 
     //mongoose.connect('mongodb://node:nodeuser@mongo.onmodulus.net:27017/uwO3mypu');     // connect to mongoDB database on modulus.io

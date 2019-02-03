@@ -25,9 +25,6 @@ var appRouter = function(app) {
 		fetch(apiUrl)
 		.then(res => res.json())
 		.then(data => {
-            //data = {"cool": "JSON"}
-            //var obj = JSON.parse(data);
-            //var output = obj.weather[0];
             var main = data.main;
             var description = data.weather[2].description
             console.log(main);
