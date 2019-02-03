@@ -2,12 +2,29 @@ const fetch = require('node-fetch');
 let apiKey = '0e717cd3e131ab52bfe30770428c992e';
 
 var appRouter = function(app) {
+    app.use(function(err, req, res, next){
+  if (req.xhr) {
+    res.send(500, 'Something went wrong!');
+  }
+  else {
+    next(err);
+  }
+});
+
+app.use(function(err, req, res, next){
+  if (req.xhr) {
+    res.send(500, 'Something went wrong!');
+  }
+  else {
+    next(err);
+  }
+});
+
     app.get("/", function(req, res) {
         res.send("Hello World");
     });
 
     let zipcode = 55455;// fixed the zipcode to University of Minnesota Twin Cities
-
 	app.get('/search-location-weather', (req, res) => {
 		//build api URL with user zip
 		const baseUrl = 'http://api.openweathermap.org/data/2.5/weather?zip=';
