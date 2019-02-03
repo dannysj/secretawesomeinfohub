@@ -14,6 +14,8 @@
     app.use(bodyParser.json());                                     // parse application/json
     app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse application/vnd.api+json as json
 
+    var routes = require("./routes/routes.js")(app);
+
     // listen (start app with node server.js) ======================================
     app.listen(8080);
     console.log("App listening on port 8080");

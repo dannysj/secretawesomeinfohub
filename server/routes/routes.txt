@@ -1,0 +1,1 @@
+http://api.openweathermap.org/data/2.5/weather?q=${minneapolis}&appid=${0e717cd3e131ab52bfe30770428c992e}
